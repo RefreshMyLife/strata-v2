@@ -91,7 +91,6 @@ export function Header() {
         {/* Dropdown Menu */}
         {isMobileMenuOpen && (
           <DropDownBurgerMenu
-            activeSection={activeSection}
             onClose={() => setIsMobileMenuOpen(false)}
           />
         )}

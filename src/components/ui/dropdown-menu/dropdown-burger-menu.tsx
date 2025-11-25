@@ -13,12 +13,10 @@ import { Markets, PieChart, Star } from "@/components/icons/header";
 import { Link } from "react-router-dom";
 
 interface DropDownBurgerMenu {
-  activeSection: string;
   onClose: () => void;
 }
 
 export function DropDownBurgerMenu({
-  activeSection,
   onClose,
 }: DropDownBurgerMenu) {
   const navigationItems = [
