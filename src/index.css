@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #D0D6D9;
+  background-color: #0C0C0C;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Border radius */
+  --radius: 0.625rem;
+
+  /* Base colors from Figma */
+  --background: #0C0C0C;
+  --foreground: #D0D6D9;
+
+  /* Card backgrounds */
+  --card: #151617;
+  --card-foreground: #D0D6D9;
+  --card-secondary: #1E2021;
+  --card-tertiary: #252829;
+  --card-quaternary: #272A30;
+
+  /* Popover */
+  --popover: #151617;
+  --popover-foreground: #D0D6D9;
+
+  /* Primary - Blue */
+  --primary: #2C6EFF;
+  --primary-foreground: #FFFFFF;
+  --primary-dark: #03153D;
+
+  /* Secondary colors */
+  --secondary: #1E2021;
+  --secondary-foreground: #D0D6D9;
+
+  /* Muted */
+  --muted: #252829;
+  --muted-foreground: rgba(208, 214, 217, 0.6);
+
+  /* Accent colors */
+  --accent: #2C6EFF;
+  --accent-foreground: #FFFFFF;
+
+  /* Status colors */
+  --success: #82EA5D;
+  --warning: #EBC230;
+  --destructive: #EA511D;
+
+  /* Borders */
+  --border: #272A30;
+  --input: #272A30;
+  --ring: #2C6EFF;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Typography from Figma */
+h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33em;
+  letter-spacing: -0.01em;
+}
+
+.mono {
+  font-family: 'DM Mono', monospace;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-card-secondary: var(--card-secondary);
+  --color-card-tertiary: var(--card-tertiary);
+  --color-card-quaternary: var(--card-quaternary);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
