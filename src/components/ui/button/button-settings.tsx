@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { Settings } from "@/components/icons/Settings";
+import { Settings } from "@/components/ui/icons/Settings";
 
 function ButtonSettings({
   className,

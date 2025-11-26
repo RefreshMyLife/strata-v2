@@ -1,22 +1,31 @@
 import { cn } from "@/lib/utils";
-import { ChevronRight } from "@/components/icons/ChevronRight";
-import { Discord, GitBook, GitHub, Mirror, Twitter } from "../../icons/social";
+import { ChevronRight } from "@/components/ui/icons/ChevronRight";
+import { TVLDisplay } from "../TVLDisplay";
+import { Link } from "react-router-dom";
 import {
   Book,
   CheckBox,
+  Discord,
   Eye,
+  GitBook,
+  GitHub,
+  Markets,
+  Mirror,
   NewsPaper,
+  PieChart,
   Questionnaire,
-} from "../../icons/dropdown-wallet";
-import { TVLDisplay } from "../TVLDisplay";
-import { Markets, PieChart, Star } from "@/components/icons/header";
-import { Link } from "react-router-dom";
+  Star,
+  Twitter,
+} from "@/components/ui/icons";
 
 interface DropDownBurgerMenu {
+  activeSection?: string;
   onClose: () => void;
 }
 
 export function DropDownBurgerMenu({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  activeSection,
   onClose,
 }: DropDownBurgerMenu) {
   const navigationItems = [
@@ -66,13 +75,13 @@ export function DropDownBurgerMenu({
               >
                 <div className="flex items-center gap-3 md:gap-3">
                   <item.icon className="size-6 md:size-5 text-[#d0d6d9] group-hover:text-foreground transition-colors" />
-                  <span className="font-mono text-[20px] md:text-[14px] font-medium leading-[28px] md:leading-normal tracking-[-0.4px] md:tracking-[-0.28px] text-[#d0d6d9] group-hover:text-foreground transition-colors">
+                  <span className="font-mono text-[20px] md:text-[14px] font-medium leading-7 md:leading-normal tracking-[-0.4px] md:tracking-[-0.28px] text-[#d0d6d9] group-hover:text-foreground transition-colors">
                     {item.label}
                   </span>
                 </div>
                 <ChevronRight
                   size={7}
-                  className="text-[#949494] opacity-40 md:opacity-0 md:group-hover:opacity-100 transition-opacity rotate-[-90deg] md:rotate-0"
+                  className="text-[#949494] opacity-40 md:opacity-0 md:group-hover:opacity-100 transition-opacity -rotate-90 md:rotate-0"
                 />
               </Link>
             ))}
@@ -95,13 +104,13 @@ export function DropDownBurgerMenu({
               >
                 <div className="flex items-center gap-3 md:gap-3">
                   <item.icon className="size-6 md:size-5 text-[#d0d6d9] group-hover:text-foreground transition-colors" />
-                  <span className="font-mono text-[20px] md:text-[14px] font-medium leading-[28px] md:leading-normal tracking-[-0.4px] md:tracking-[-0.28px] text-[#d0d6d9] group-hover:text-foreground transition-colors">
+                  <span className="font-mono text-[20px] md:text-[14px] font-medium leading-7 md:leading-normal tracking-[-0.4px] md:tracking-[-0.28px] text-[#d0d6d9] group-hover:text-foreground transition-colors">
                     {item.label}
                   </span>
                 </div>
                 <ChevronRight
                   size={7}
-                  className="text-[#949494] opacity-40 md:opacity-0 md:group-hover:opacity-100 transition-opacity rotate-[-90deg] md:rotate-0"
+                  className="text-[#949494] opacity-40 md:opacity-0 md:group-hover:opacity-100 transition-opacity -rotate-90 md:rotate-0"
                 />
               </a>
             ))}
@@ -208,7 +217,7 @@ export function DropDownBurgerMenu({
 
           {/* Footer - Mobile Only */}
           <div className="md:hidden border-t border-border bg-background px-2 py-3 w-full">
-            <div className="flex items-center gap-3 text-[12px] font-medium leading-[16px] tracking-[-0.12px]">
+            <div className="flex items-center gap-3 text-[12px] font-medium leading-4 tracking-[-0.12px]">
               <span className="text-foreground whitespace-nowrap">
                 © 2025 Strata Labs
               </span>

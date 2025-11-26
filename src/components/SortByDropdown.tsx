@@ -6,7 +6,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu/dropdown-menu";
-import { ArrowFillDown } from "@/components/icons";
+import { ArrowFillDown } from "@/components/ui/icons";
 import { cn } from "@/lib/utils";
 
 // Типы для значений сортировки
@@ -41,9 +41,9 @@ export function SortByDropdown({
             // Базовые стили
             "mono relative flex items-center justify-center gap-2 rounded-[4px] border border-solid transition-all",
             // Mobile: меньше padding и шрифт
-            "p-3 text-[12px] leading-[16px] tracking-[-0.24px]",
+            "p-3 text-[12px] leading-4 tracking-[-0.24px]",
             // Desktop: больше padding и шрифт
-            "md:px-3.5 md:py-3.5 md:text-[14px] md:leading-[20px] md:tracking-[-0.28px]",
+            "md:px-3.5 md:py-3.5 md:text-[14px] md:leading-5 md:tracking-[-0.28px]",
             "font-medium",
             // Default состояние
             !isOpen && "bg-[#151617] border-[#272a30]",
@@ -81,7 +81,7 @@ export function SortByDropdown({
         align="start"
         sideOffset={4}
       >
-        <DropdownMenuLabel className="px-2 pt-1 pb-0 text-[12px] leading-[20px] tracking-[-0.12px] text-[#d0d6d9] opacity-40">
+        <DropdownMenuLabel className="px-2 pt-1 pb-0 text-[12px] leading-5 tracking-[-0.12px] text-[#d0d6d9] opacity-40">
           SORT BY
         </DropdownMenuLabel>
         {SORT_OPTIONS.map((option) => (
@@ -90,9 +90,9 @@ export function SortByDropdown({
             className={cn(
               "rounded-[4px] cursor-pointer",
               // Mobile: меньше padding и шрифт
-              "p-3 text-[12px] leading-[16px] tracking-[-0.24px]",
+              "p-3 text-[12px] leading-4 tracking-[-0.24px]",
               // Desktop: больше padding и шрифт
-              "md:px-3.5 md:py-3.5 md:text-[14px] md:leading-[20px] md:tracking-[-0.28px]",
+              "md:px-3.5 md:py-3.5 md:text-[14px] md:leading-5 md:tracking-[-0.28px]",
               "text-[#d0d6d9] font-medium",
               "focus:outline-none",
               // Выделение текущего элемента

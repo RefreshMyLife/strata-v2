@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Ethereum, Wallet } from "@/components/icons/wallets";
+import { Ethereum, Wallet } from "@/components/ui/icons/wallets";
 
 type ButtonConnectWalletConnectedProps = React.ComponentProps<"button"> & {
   address?: string;

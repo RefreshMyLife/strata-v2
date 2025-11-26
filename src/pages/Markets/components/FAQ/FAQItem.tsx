@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { FAQItemProps } from "./faq.types";
-import { ArrowRight } from "@/components/icons";
+import { ArrowRight } from "@/components/ui/icons";
 
 export const FAQItem = ({
   question,

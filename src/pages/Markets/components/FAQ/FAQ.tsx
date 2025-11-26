@@ -4,7 +4,7 @@ import { ButtonPrimary } from "@/components/ui/button/button-primary";
 import { ButtonSecondary } from "@/components/ui/button/button-secondary";
 import { FAQItem } from "./FAQItem";
 import { FAQ_ITEMS } from "./faq.constants";
-import { ArrowFillRight } from "@/components/icons";
+import { ArrowFillRight } from "@/components/ui/icons";
 
 export const FAQ = () => {
   const [openItemIndex, setOpenItemIndex] = useState<number | null>(null);
@@ -21,25 +21,25 @@ export const FAQ = () => {
           {/* Title with highlighted "Maximize" */}
           <div className="flex items-start gap-2">
             <div className="flex items-center pb-1">
-              <h2 className="font-['DM_Sans_36pt',sans-serif] text-[40px] font-semibold leading-[40px] tracking-[-0.4px] text-[#d0d6d9]">
+              <h2 className="font-['DM_Sans_36pt',sans-serif] text-[40px] font-semibold leading-10 tracking-[-0.4px] text-[#d0d6d9]">
                 Deposit.
               </h2>
             </div>
             <div className="flex items-center pb-1">
-              <h2 className="font-['DM_Sans_36pt',sans-serif] text-[40px] font-semibold leading-[40px] tracking-[-0.4px] text-[#d0d6d9]">
+              <h2 className="font-['DM_Sans_36pt',sans-serif] text-[40px] font-semibold leading-10 tracking-[-0.4px] text-[#d0d6d9]">
                 Earn.
               </h2>
             </div>
             <div className="relative flex items-center justify-center">
-              <div className="absolute bg-[#2c6eff] rounded bottom-[-2px] left-[-4px] w-[186px] h-[46px]" />
-              <h2 className="relative font-['DM_Sans_36pt',sans-serif] text-[40px] font-semibold leading-[40px] tracking-[-0.4px] text-white">
+              <div className="absolute bg-[#2c6eff] rounded -bottom-0.5 -left-1 w-[186px] h-[46px]" />
+              <h2 className="relative font-['DM_Sans_36pt',sans-serif] text-[40px] font-semibold leading-10 tracking-[-0.4px] text-white">
                 Maximize.
               </h2>
             </div>
           </div>
 
           {/* Description */}
-          <p className="font-['DM_Sans_36pt',sans-serif] text-[18px] font-medium leading-[24px] tracking-[-0.18px] text-[#d0d6d9] opacity-80">
+          <p className="font-['DM_Sans_36pt',sans-serif] text-[18px] font-medium leading-6 tracking-[-0.18px] text-[#d0d6d9] opacity-80">
             Unlock even greater rewards by using Senior & Junior tokens
             <br />
             across partner DeFi protocols in the Strata ecosystem.
@@ -53,7 +53,7 @@ export const FAQ = () => {
 
         {/* FAQ Section */}
         <div className="flex flex-col gap-4">
-          <h3 className="font-['DM_Sans_36pt',sans-serif] text-[24px] font-semibold leading-[32px] tracking-[-0.24px] text-[#d0d6d9]">
+          <h3 className="font-['DM_Sans_36pt',sans-serif] text-[24px] font-semibold leading-8 tracking-[-0.24px] text-[#d0d6d9]">
             Everything You Need To Know
           </h3>
 

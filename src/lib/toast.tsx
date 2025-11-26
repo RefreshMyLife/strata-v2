@@ -4,7 +4,7 @@ import {
   CloseCircleFill,
   AlertFill,
   CheckboxCircleFill,
-} from "@/components/icons/toast";
+} from "@/components/ui/icons/toast";
 
 export const toast = {
   success: (message: string) => {

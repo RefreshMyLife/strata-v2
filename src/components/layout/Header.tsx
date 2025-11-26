@@ -1,7 +1,4 @@
 import { ConnectWalletButton } from "@/components/web3/ConnectWalletButton";
-import { Markets } from "@/components/icons/header/Markets";
-import { Star } from "@/components/icons/header/Star";
-import { PieChart } from "@/components/icons/header/PieChart";
 import { ButtonBurgerMenu } from "@/components/ui/button/button-burger-menu";
 import { Logo } from "@/components/ui/Logo";
 import { TVLDisplay } from "@/components/ui/TVLDisplay";
@@ -9,6 +6,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { DropDownBurgerMenu } from "../ui/dropdown-menu";
 import { Link, useLocation } from "react-router-dom";
+import { Markets, PieChart, Star } from "../ui/icons";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,7 +23,7 @@ export function Header() {
           {/* Left Section: Logo + Navigation */}
           <div className="flex items-center gap-3 sm:gap-8 min-w-0 flex-shrink">
             {/* Logo */}
-            <Link to="/" className="flex items-center flex-shrink-0">
+            <Link to="/" className="flex items-center shrink-0">
               <Logo className="h-7 w-auto text-foreground" />
             </Link>
 
@@ -90,9 +88,7 @@ export function Header() {
 
         {/* Dropdown Menu */}
         {isMobileMenuOpen && (
-          <DropDownBurgerMenu
-            onClose={() => setIsMobileMenuOpen(false)}
-          />
+          <DropDownBurgerMenu onClose={() => setIsMobileMenuOpen(false)} />
         )}
       </div>
     </header>

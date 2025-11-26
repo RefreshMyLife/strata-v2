@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { VaultCardAsset } from "@/components/ui/VaultCardAsset";
 import { ButtonPrimary } from "@/components/ui/button/index";
-import { ArrowRightLong } from "@/components/icons/ArrowRightLong";
+import { ArrowRightLong } from "@/components/ui/icons/ArrowRightLong";
 
 interface Asset {
   name: string;

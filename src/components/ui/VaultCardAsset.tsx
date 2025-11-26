@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { ArrowFillRight } from "../icons";
+import { ArrowFillRight } from "./icons";
 
 interface NetworkIcon {
   src: string;
