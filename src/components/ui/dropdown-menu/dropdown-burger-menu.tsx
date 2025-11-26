@@ -23,11 +23,7 @@ interface DropDownBurgerMenu {
   onClose: () => void;
 }
 
-export function DropDownBurgerMenu({
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  activeSection,
-  onClose,
-}: DropDownBurgerMenu) {
+export function DropDownBurgerMenu({ onClose }: DropDownBurgerMenu) {
   const navigationItems = [
     { id: "markets", label: "MARKETS", icon: Markets, href: "/markets" },
     { id: "portfolio", label: "PORTFOLIO", icon: PieChart, href: "/portfolio" },
