@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils"
 function ButtonSecondary({
   className,
   children,
-  rightIcon = false,
+  rightIcon,
   ...props
 }: React.ComponentProps<"button"> & {
-  rightIcon?: boolean
+  rightIcon?: React.ReactNode | boolean
 }) {
   return (
     <button
@@ -37,7 +37,13 @@ function ButtonSecondary({
         <span className="whitespace-nowrap">{children}</span>
       </span>
       {rightIcon && (
-        <Plus className="size-[20px] text-[#d0d6d9] ml-[10px]" />
+        <span className="ml-[10px]">
+          {typeof rightIcon === "boolean" ? (
+            <Plus className="size-[20px] text-[#d0d6d9]" />
+          ) : (
+            rightIcon
+          )}
+        </span>
       )}
     </button>
   )

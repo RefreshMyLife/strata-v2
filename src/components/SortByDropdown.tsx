@@ -6,7 +6,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu/dropdown-menu";
-import { ChevronDown } from "@/components/icons";
+import { ArrowFillDown } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
 // Типы для значений сортировки
@@ -60,11 +60,12 @@ export function SortByDropdown({
             <span className="text-[#d0d6d9] opacity-60">SORT BY</span>
             <span className="text-[#d0d6d9]">{value}</span>
           </div>
-          <ChevronDown
-            size={16}
+          <ArrowFillDown
+            width={7}
+            height={4}
             className={cn(
               // Mobile: 16px, Desktop: 20px
-              "md:w-5 md:h-5",
+
               "text-[#d0d6d9] opacity-40 transition-transform duration-200",
               isOpen && "rotate-180"
             )}
