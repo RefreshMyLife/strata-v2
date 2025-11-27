@@ -1,6 +1,6 @@
-import * as React from "react"
-import * as TabsPrimitive from "@radix-ui/react-tabs"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { cn } from "@/lib/utils";
 
 function TabsFilledVault({
   className,
@@ -12,7 +12,7 @@ function TabsFilledVault({
       className={cn("w-full", className)}
       {...props}
     />
-  )
+  );
 }
 
 function TabsFilledVaultList({
@@ -21,10 +21,10 @@ function TabsFilledVaultList({
 }: React.ComponentProps<typeof TabsPrimitive.List>) {
   return (
     <TabsPrimitive.List
-      className={cn("inline-flex flex-col gap-2 w-full", className)}
+      className={cn("inline-flex gap-2 w-full", className)}
       {...props}
     />
-  )
+  );
 }
 
 function TabsFilledVaultTrigger({
@@ -34,8 +34,8 @@ function TabsFilledVaultTrigger({
   label,
   ...props
 }: React.ComponentProps<typeof TabsPrimitive.Trigger> & {
-  logo?: React.ReactNode
-  label?: string
+  logo?: React.ReactNode;
+  label?: string;
 }) {
   return (
     <TabsPrimitive.Trigger
@@ -68,7 +68,7 @@ function TabsFilledVaultTrigger({
         )}
       </div>
     </TabsPrimitive.Trigger>
-  )
+  );
 }
 
 function TabsFilledVaultContent({
@@ -83,12 +83,12 @@ function TabsFilledVaultContent({
       )}
       {...props}
     />
-  )
+  );
 }
 
 export {
   TabsFilledVault,
   TabsFilledVaultList,
   TabsFilledVaultTrigger,
-  TabsFilledVaultContent
-}
+  TabsFilledVaultContent,
+};

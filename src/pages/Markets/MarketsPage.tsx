@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   TabsFilledNetwork,
   TabsFilledNetworkContent,
@@ -18,6 +19,7 @@ import {
 import type { NetworkId } from "./components/markets.types";
 
 export function MarketsPage() {
+  const navigate = useNavigate();
   const [activeNetwork, setActiveNetwork] = useState<NetworkId>("all");
   const [sortBy, setSortBy] = useState<SortValue>("DEFAULT");
 
@@ -29,7 +31,7 @@ export function MarketsPage() {
 
   // Обработчик клика на "VIEW MARKET"
   const handleViewMarket = (vaultId: string) => {
-    console.log("View market:", vaultId);
+    navigate(`/markets/${vaultId}`);
   };
 
   return (

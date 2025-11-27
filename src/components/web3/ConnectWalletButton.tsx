@@ -3,18 +3,35 @@ import { useConnectModal } from "@rainbow-me/rainbowkit";
 import { WalletMenu } from "./WalletMenu";
 import { ButtonConnectWallet } from "../ui/button/button-connect-wallet";
 
-export function ConnectWalletButton() {
+interface ConnectWalletButtonProps {
+  className?: string;
+  hideWhenConnected?: boolean;
+}
+
+export function ConnectWalletButton({
+  className,
+  hideWhenConnected = false
+}: ConnectWalletButtonProps) {
   const { address, isConnected } = useAccount();
   const { openConnectModal } = useConnectModal();
 
-  // Если кошелек подключен, показываем меню
+  // Если кошелек подключен
   if (isConnected && address) {
+    // Если указано скрывать при подключении, не рендерим ничего
+    if (hideWhenConnected) {
+      return null;
+    }
+    // Иначе показываем меню
     return <WalletMenu address={address} />;
   }
 
   // Если не подключен, показываем кнопку подключения
   return (
-    <ButtonConnectWallet onClick={openConnectModal} connected={false}>
+    <ButtonConnectWallet
+      onClick={openConnectModal}
+      connected={false}
+      className={className}
+    >
       CONNECT WALLET
     </ButtonConnectWallet>
   );

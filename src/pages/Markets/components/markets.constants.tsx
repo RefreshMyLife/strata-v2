@@ -54,6 +54,8 @@ export const VAULTS_DATA: VaultData[] = [
     protocolName: "Ethena USDe",
     description:
       "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money.",
+    detailDescription:
+      "USDe is the synthetic dollar from Ethena, a protocol that combines yield from staked ETH and basis spread from perps and futures to create on-chain money solution. There will be no vesting requirements for Sats earned from this pool.",
     totalTvl: "$875.12M",
     networkId: "ethereum",
     networkName: "ETHEREUM",
@@ -62,7 +64,7 @@ export const VAULTS_DATA: VaultData[] = [
     assets: [
       {
         name: "srUSDe",
-        fullName: "SENIOR USDe",
+        fullName: "Senior USDe",
         coinIcon: srUSDeIcon,
         price: "$1.00",
         marketCap: "$2.05B",
@@ -75,7 +77,7 @@ export const VAULTS_DATA: VaultData[] = [
       },
       {
         name: "jrUSDe",
-        fullName: "JUNIOR USDe",
+        fullName: "Junior USDe",
         coinIcon: jrUSDeIcon,
         price: "$1.00",
         marketCap: "$2.05B",
@@ -94,6 +96,8 @@ export const VAULTS_DATA: VaultData[] = [
     protocolName: "Hyperliquid LP",
     description:
       "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money.",
+    detailDescription:
+      "USDe is the synthetic dollar from Ethena, a protocol that combines yield from staked ETH and basis spread from perps and futures to create on-chain money solution. There will be no vesting requirements for Sats earned from this pool.",
     totalTvl: "$2.05B",
     networkId: "ethereum",
     networkName: "ETHEREUM",
@@ -102,7 +106,7 @@ export const VAULTS_DATA: VaultData[] = [
     assets: [
       {
         name: "srUSDe",
-        fullName: "SENIOR USDe",
+        fullName: "Senior USDe",
         coinIcon: srUSDeIcon,
         price: "$1.00",
         marketCap: "$2.05B",
@@ -115,7 +119,7 @@ export const VAULTS_DATA: VaultData[] = [
       },
       {
         name: "jrUSDe",
-        fullName: "JUNIOR USDe",
+        fullName: "Junior USDe",
         coinIcon: jrUSDeIcon,
         price: "$1.00",
         marketCap: "$2.05B",

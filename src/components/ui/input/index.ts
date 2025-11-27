@@ -1,5 +1,5 @@
-export { Input } from "./input";
-export type { InputProps } from "./input";
+export { InputBuySell}from "./input-buy-sell";
+export type { InputProps } from "./input-buy-sell";
 
 export { SearchInput } from "./input-search";
 export type { SearchInputProps } from "./input-search";

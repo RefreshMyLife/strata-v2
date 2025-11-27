@@ -2,7 +2,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "./components/ui/sonner";
-import { HomePage, MarketsPage, PortfolioPage, FavoritesPage } from "@/pages";
+import {
+  HomePage,
+  MarketsPage,
+  MarketDetailPage,
+  PortfolioPage,
+  FavoritesPage,
+} from "@/pages";
 
 function App() {
   return (
@@ -13,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/markets" element={<MarketsPage />} />
+          <Route path="/markets/:marketId" element={<MarketDetailPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
         </Routes>

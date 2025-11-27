@@ -4,8 +4,11 @@ export { ChevronLeft } from './ChevronLeft'
 export { ChevronRight } from './ChevronRight'
 export { ArrowRight } from './ArrowRight'
 export { ArrowRightLong } from './ArrowRightLong'
+export { ArrowLeftLong } from './ArrowLeftLong'
 export { ArrowFillDown } from './ArrowFillDown'
 export { ArrowFillRight } from './ArrowFillRight'
+export { InformationFill } from './InformationFill'
+export { ExternalLink } from './ExternalLink'
 
 export { BaseIcon, EthereumIcon, HyperliquidIcon, SonicIcon } from './networks'
 

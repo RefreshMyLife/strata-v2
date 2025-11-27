@@ -47,6 +47,7 @@ export function VaultCard({
   assets,
   backgroundImage,
   className,
+  onViewMarket,
 }: VaultCardProps) {
   return (
     <div
@@ -138,6 +139,7 @@ export function VaultCard({
 
       <div className="box-border content-stretch flex flex-col gap-2.5 items-start p-2 w-full">
         <ButtonPrimary
+          onClick={onViewMarket}
           children="VIEW MARKET"
           className=" w-full font-mono text-[14px] font-medium leading-5"
           rightIcon={<ArrowRightLong size={20} />}

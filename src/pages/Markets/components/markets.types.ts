@@ -26,6 +26,7 @@ export interface VaultData {
   protocolIcon: string;
   protocolName: string;
   description: string;
+  detailDescription: string;
   totalTvl: string;
   networkId: NetworkId;
   networkName: string;
