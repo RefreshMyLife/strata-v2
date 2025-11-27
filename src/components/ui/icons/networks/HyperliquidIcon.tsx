@@ -1,3 +1,5 @@
+import hyperliquidIcon from "@/assets/icons/network/hyperliquid.svg?url";
+
 interface HyperliquidIconProps {
   className?: string;
   size?: number;
@@ -7,7 +9,7 @@ export function HyperliquidIcon({ className = "", size = 16 }: HyperliquidIconPr
   return (
     <div className={className} style={{ width: size, height: size }}>
       <img
-        src="/src/assets/icons/network/hyperliquid.svg"
+        src={hyperliquidIcon}
         alt="Hyperliquid"
         className="block max-w-none size-full"
       />
