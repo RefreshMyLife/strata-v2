@@ -52,7 +52,7 @@ export function TradingWidget({ asset }: TradingWidgetProps) {
             <div className="font-sans font-semibold text-[48px] leading-[40px] tracking-[-0.48px] text-[#d0d6d9]">
               USDe
             </div>
-            <div className="size-6 rounded-full overflow-hidden align-end">
+            <div className="size-6 rounded-full overflow-hidden self-end">
               <img
                 src={usdeIcon}
                 alt="usde"
