@@ -17,10 +17,6 @@ interface TradingWidgetProps {
  */
 export function TradingWidget({ asset }: TradingWidgetProps) {
   const [activeTab, setActiveTab] = useState<string>("buy");
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [inputAmount, setInputAmount] = useState<string>("");
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [outputAmount, setOutputAmount] = useState<string>("");
 
   return (
     <div className="bg-[#151617] rounded-lg p-6 space-y-4">
@@ -70,10 +66,7 @@ export function TradingWidget({ asset }: TradingWidgetProps) {
         </div>
 
         {/* Правая часть: Input */}
-        <InputBuySell
-          tokenPrice={1.0}
-          onValueChange={(value) => setInputAmount(value)}
-        />
+        <InputBuySell tokenPrice={1.0} />
       </div>
 
       {/* Кнопка swap */}
@@ -111,10 +104,7 @@ export function TradingWidget({ asset }: TradingWidgetProps) {
         </div>
 
         {/* Правая часть: Input */}
-        <InputBuySell
-          tokenPrice={parseFloat(asset.price) || 0}
-          onValueChange={(value) => setOutputAmount(value)}
-        />
+        <InputBuySell tokenPrice={parseFloat(asset.price) || 0} />
       </div>
 
       {/* CONNECT WALLET кнопка */}
