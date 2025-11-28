@@ -7,6 +7,7 @@ interface CustomTooltipProps {
     dataKey: string;
   }>;
   label?: string;
+  dataFilter?: string;
 }
 
 export const CustomTooltip = ({
@@ -49,10 +50,10 @@ export const CustomTooltip = ({
     <div className="flex flex-col items-center">
       {/* Основной блок тултипа */}
       <div className="bg-[#d0d6d9] rounded px-2 py-1 overflow-hidden">
-        <p className="text-sm leading-5 tracking-[-0.14px] text-[#0c0c0c] font-semibold max-w-[160px]">
+        <p className="text-sm leading-5 tracking-[-0.14px] text-[#0c0c0c] font-semibold max-w-40">
           {title}
         </p>
-        <p className="text-sm leading-5 tracking-[-0.14px] text-[#0c0c0c] font-medium max-w-[160px]">
+        <p className="text-sm leading-5 tracking-[-0.14px] text-[#0c0c0c] font-medium max-w-40">
           {month} {formattedValue}
         </p>
       </div>

@@ -17,3 +17,5 @@ export interface ChartDataPoint {
 
 export type PeriodFilter = "7D" | "30D" | "1Y" | "ALL";
 export type DataFilter = "price" | "marketCap" | "apy" | "coverage";
+export type YAxisFormatter = (value: number) => string;
+export type FormatXAxis = (value: string) => string;

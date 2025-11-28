@@ -21,7 +21,7 @@ export function APYMetric({
     <div className="flex flex-1 items-center gap-3">
       {/* Вертикальная цветная линия */}
       <div
-        className="h-[-webkit-fill-available] w-[2px] shrink-0"
+        className="h-[-webkit-fill-available] w-0.5 shrink-0"
         style={{ backgroundColor: color }}
       />
 

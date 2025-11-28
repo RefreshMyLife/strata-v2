@@ -1,10 +1,19 @@
-import { useState } from "react";
 import { FilterChip } from "../../components";
 import type { DataFilter, PeriodFilter } from "./types";
 
-export const CustomFilterBar = () => {
-  const [dataFilter, setDataFilter] = useState<DataFilter>("price");
-  const [periodFilter, setPeriodFilter] = useState<PeriodFilter>("ALL");
+export interface CustomFilterBarProps {
+  dataFilter: DataFilter;
+  setDataFilter: React.Dispatch<React.SetStateAction<DataFilter>>;
+  periodFilter: PeriodFilter;
+  setPeriodFilter: React.Dispatch<React.SetStateAction<PeriodFilter>>;
+}
+
+export const CustomFilterBar = ({
+  dataFilter,
+  setDataFilter,
+  periodFilter,
+  setPeriodFilter,
+}: CustomFilterBarProps) => {
   return (
     <div className="flex items-center justify-between">
       {/* Фильтры данных (слева) */}
