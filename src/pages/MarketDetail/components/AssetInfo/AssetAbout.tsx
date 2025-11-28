@@ -20,26 +20,30 @@ interface AssetAboutProps {
  */
 export function AssetAbout({ asset, description }: AssetAboutProps) {
   return (
-    <div className="bg-[#151617] rounded-lg p-6 flex flex-col gap-6">
-      <TabsUnderline defaultValue="about">
-        <TabsUnderlineList className="border-b-2 border-[#272a30] w-full">
-          <TabsUnderlineTrigger value="about">About</TabsUnderlineTrigger>
-          <TabsUnderlineTrigger value="charts">Charts</TabsUnderlineTrigger>
-          <TabsUnderlineTrigger value="reserves">Reserves</TabsUnderlineTrigger>
-        </TabsUnderlineList>
+    <div className="flex flex-col gap-4">
+      <div className="">
+        <TabsUnderline defaultValue="about">
+          <TabsUnderlineList className="bg-[#151617] border-b-2 border-[#272a30] w-full pt-6 pl-6">
+            <TabsUnderlineTrigger value="about">About</TabsUnderlineTrigger>
+            <TabsUnderlineTrigger value="charts">Charts</TabsUnderlineTrigger>
+            <TabsUnderlineTrigger value="reserves">
+              Reserves
+            </TabsUnderlineTrigger>
+          </TabsUnderlineList>
 
-        <TabsUnderlineContent value="about">
-          <AboutTab asset={asset} description={description} />
-        </TabsUnderlineContent>
+          <TabsUnderlineContent value="about">
+            <AboutTab asset={asset} description={description} />
+          </TabsUnderlineContent>
 
-        <TabsUnderlineContent value="charts">
-          <ChartsTab />
-        </TabsUnderlineContent>
+          <TabsUnderlineContent value="charts">
+            <ChartsTab />
+          </TabsUnderlineContent>
 
-        <TabsUnderlineContent value="reserves">
-          <ReservesTab />
-        </TabsUnderlineContent>
-      </TabsUnderline>
+          <TabsUnderlineContent value="reserves">
+            <ReservesTab />
+          </TabsUnderlineContent>
+        </TabsUnderline>
+      </div>
     </div>
   );
 }

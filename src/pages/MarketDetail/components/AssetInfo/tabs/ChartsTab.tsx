@@ -43,7 +43,7 @@ export function ChartsTab() {
   const yAxisFormatter = isBarChart ? formatYAxisPercent : formatYAxisCurrency;
   console.log(yAxisFormatter, "yAxisFormatter");
   return (
-    <div className="flex flex-col gap-4">
+    <div className="bg-[#151617] rounded-lg p-6 flex flex-col gap-4">
       {/* Фильтры */}
 
       <CustomFilterBar

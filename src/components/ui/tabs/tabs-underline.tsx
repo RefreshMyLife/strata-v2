@@ -1,6 +1,6 @@
-import * as React from "react"
-import * as TabsPrimitive from "@radix-ui/react-tabs"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { cn } from "@/lib/utils";
 
 function TabsUnderline({
   className,
@@ -12,7 +12,7 @@ function TabsUnderline({
       className={cn("w-full", className)}
       {...props}
     />
-  )
+  );
 }
 
 function TabsUnderlineList({
@@ -24,7 +24,7 @@ function TabsUnderlineList({
       className={cn("inline-flex items-center gap-6", className)}
       {...props}
     />
-  )
+  );
 }
 
 function TabsUnderlineTrigger({
@@ -51,7 +51,7 @@ function TabsUnderlineTrigger({
       )}
       {...props}
     />
-  )
+  );
 }
 
 function TabsUnderlineContent({
@@ -61,12 +61,17 @@ function TabsUnderlineContent({
   return (
     <TabsPrimitive.Content
       className={cn(
-        "mt-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6eff] focus-visible:ring-offset-2",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6eff] focus-visible:ring-offset-2",
         className
       )}
       {...props}
     />
-  )
+  );
 }
 
-export { TabsUnderline, TabsUnderlineList, TabsUnderlineTrigger, TabsUnderlineContent }
+export {
+  TabsUnderline,
+  TabsUnderlineList,
+  TabsUnderlineTrigger,
+  TabsUnderlineContent,
+};

@@ -21,38 +21,45 @@ export function ReservesTab() {
   const filteredData = getFilteredData(mockData, timeFilter);
 
   return (
-    <>
-      {/* Фильтры */}
-      <CustomFilterBar
-        dataFilter={dataFilter}
-        setDataFilter={setDataFilter}
-        timeFilter={timeFilter}
-        setTimeFilter={setTimeFilter}
-      />
+    <div className="flex flex-col gap-2">
+      {/* Карточка с графиком */}
+      <div className="bg-[#151617] rounded-lg p-6 flex flex-col gap-4">
+        {/* Фильтры */}
+        <CustomFilterBar
+          dataFilter={dataFilter}
+          setDataFilter={setDataFilter}
+          timeFilter={timeFilter}
+          setTimeFilter={setTimeFilter}
+        />
 
-      {/* Заголовок */}
-      <CustomFilterTitle dataFilter={dataFilter} filteredData={filteredData} />
-      {/* График */}
-      <ChartContainer height="sm">
-        {dataFilter === "collateralAssets" ? (
-          // График для Collateral Assets
-          <CollateralAssetcCharts
-            filteredData={filteredData}
-            dataFilter={dataFilter}
-          />
-        ) : (
-          // График для Collateral APY (два area графика)
-          <CollateralAssetcCharts
-            filteredData={filteredData}
-            dataFilter={dataFilter}
-          />
-        )}
-      </ChartContainer>
+        {/* Заголовок */}
+        <CustomFilterTitle
+          dataFilter={dataFilter}
+          filteredData={filteredData}
+        />
 
-      {/* Таблица залоговых активов (отображается только для Collateral Assets) */}
+        {/* График */}
+        <ChartContainer height="sm">
+          {dataFilter === "collateralAssets" ? (
+            // График для Collateral Assets
+            <CollateralAssetcCharts
+              filteredData={filteredData}
+              dataFilter={dataFilter}
+            />
+          ) : (
+            // График для Collateral APY (два area графика)
+            <CollateralAssetcCharts
+              filteredData={filteredData}
+              dataFilter={dataFilter}
+            />
+          )}
+        </ChartContainer>
+      </div>
+
+      {/* Карточка с таблицей (отображается только для Collateral Assets) */}
       {dataFilter === "collateralAssets" && (
-        <CollateralAssetsTable assets={mockCollateralAssets} className="mt-4" />
+        <CollateralAssetsTable assets={mockCollateralAssets} />
       )}
-    </>
+    </div>
   );
 }

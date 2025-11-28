@@ -4,7 +4,7 @@ import type { CollateralAsset } from "../../components";
     {
       name: "srUSDe",
       iconUrl:
-        "https://www.figma.com/api/mcp/asset/f8692a31-7232-4a13-9ba8-ce697d48a536",
+        "/src/assets/icons/coins/srUSDe.svg",
       apy: 4.39,
       value: 2929131000,
       share: 84.39,
@@ -12,7 +12,7 @@ import type { CollateralAsset } from "../../components";
     {
       name: "wstETH",
       iconUrl:
-        "https://www.figma.com/api/mcp/asset/f8692a31-7232-4a13-9ba8-ce697d48a536",
+        "/src/assets/icons/coins/srUSDe.svg",
       apy: 3.12,
       value: 542876000,
       share: 15.61,

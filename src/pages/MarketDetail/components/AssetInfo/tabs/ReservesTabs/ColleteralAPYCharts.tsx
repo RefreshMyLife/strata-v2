@@ -1,5 +1,4 @@
 import { formatDateShort } from "@/lib/formatters";
-import React from "react";
 import {
   Area,
   AreaChart,

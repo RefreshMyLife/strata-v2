@@ -12,9 +12,9 @@ interface AboutTabProps {
  */
 export function AboutTab({ asset, description }: AboutTabProps) {
   return (
-    <>
+    <div className="bg-[#151617] rounded-lg p-6 flex flex-col gap-6">
       {/* Описание и бейджи */}
-      <div className="flex items-start justify-between mb-6">
+      <div className="flex items-start justify-between">
         <p className="text-sm leading-5 tracking-[-0.14px] text-white opacity-60 max-w-[420px]">
           {description}
         </p>
@@ -61,6 +61,6 @@ export function AboutTab({ asset, description }: AboutTabProps) {
 
         <MetricsRow label="Yield Source" value="sUSDe" link />
       </div>
-    </>
+    </div>
   );
 }
