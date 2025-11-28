@@ -6,7 +6,7 @@ import { ButtonSettings, ButtonSwap } from "@/components/ui/button/index";
 import usdeIcon from "@/assets/icons/coins/USDe.svg?url";
 import { ArrowFillBlueDown } from "@/components/ui/icons/ArrowFillBlueDown";
 import { ConnectWalletButton } from "@/components/web3/ConnectWalletButton";
-import { ConversionRateAccordion } from "./ConversionRateAccordion";
+import { ConversionRateAccordion } from "./components/ConversionRateAccordion";
 
 interface TradingWidgetProps {
   asset: VaultAsset;

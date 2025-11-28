@@ -13,7 +13,7 @@ export function MarketDetailPage() {
     return <Navigate to="/markets" replace />;
   }
 
-  // Для простоты берем первый актив (можно добавить логику выбора)
+  // берем первый актив
   const asset = vault.assets[0];
 
   return (
@@ -24,7 +24,10 @@ export function MarketDetailPage() {
       {/* Основной контент */}
       <div className="grid grid-cols-1 lg:grid-cols-[4fr_3fr] gap-2.5">
         {/* Левая колонка - информация об активе */}
-        <AssetAbout asset={asset} description={vault.detailDescription || vault.description} />
+        <AssetAbout
+          asset={asset}
+          description={vault.detailDescription || vault.description}
+        />
 
         {/* Правая колонка - виджет торговли */}
         <TradingWidget asset={asset} />
