@@ -6,6 +6,7 @@ import { mockCollateralAssets } from "./ReservesTabs/mockData";
 import { CustomFilterBar } from "./ReservesTabs/CustomFilterBar";
 import { CustomFilterTitle } from "./ReservesTabs/CustomFilterTitle";
 import { CollateralAssetcCharts } from "./ReservesTabs/CollateralAssetcCharts";
+import { ColleteralAPYCharts } from "./ReservesTabs/ColleteralAPYCharts";
 
 /**
  * Таб Reserves с графиками залоговых активов и APY
@@ -48,7 +49,7 @@ export function ReservesTab() {
             />
           ) : (
             // График для Collateral APY (два area графика)
-            <CollateralAssetcCharts
+            <ColleteralAPYCharts
               filteredData={filteredData}
               dataFilter={dataFilter}
             />
